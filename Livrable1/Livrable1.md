@@ -36,3 +36,14 @@ datawharehouse => prosit 2
 ## Jobs Talend
 BM_Livrable => nom du nouveau buisness model  
 objectifs : Livrable
+
+nom du Job : AlimentationLivrable
+objectif : bdd livrable1
+
+**Sources de données:**
+DB Postgres : soins_medico_administratifs
+CSV : activité professionnel de santé, etablissement santé, professionnel de santé, satisfaction (2016,17-18,19,20), liste des personnes décédées (2010-2021), Hospitalisations
+
+
+
+
