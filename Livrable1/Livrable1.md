@@ -31,3 +31,8 @@ comme sur le WSProsit 2
 
 ## Description de l'architecture de l’entrepôt de données
 datawharehouse => prosit 2
+
+# Notes
+## Jobs Talend
+BM_Livrable => nom du nouveau buisness model 
+objectifs : Livrable
