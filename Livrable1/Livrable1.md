@@ -12,5 +12,10 @@ Format : Rapport
 # Livrable 1
 
 ## Modélisation des différents axes d'analyse ainsi que les mesures
+<img width="2009" alt="BigData" src="https://user-images.githubusercontent.com/56393986/167380532-11b296bb-d3b8-48e6-ae30-af4d88ee4af8.png">
+
 ## Développement des jobs d'alimentation du schéma décisionnel
+comme sur le WSProsit 2
+
 ## Description de l'architecture de l’entrepôt de données
+datawharehouse => prosit 2
