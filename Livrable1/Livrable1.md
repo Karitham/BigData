@@ -34,5 +34,5 @@ datawharehouse => prosit 2
 
 # Notes
 ## Jobs Talend
-BM_Livrable => nom du nouveau buisness model 
+BM_Livrable => nom du nouveau buisness model  
 objectifs : Livrable
