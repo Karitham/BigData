@@ -61,11 +61,20 @@ connection talend aux sources de données :
 PgProjet connecter à la base pg soin medico administratifs permets de connecter à la base de données postgres 'soins_medico_administratifs'
 
 mot de passe = cesi  
-![image](https://user-images.githubusercontent.com/56393986/168025172-4f3e7aee-dc48-44f4-9347-49003699342d.png)
+![image](https://user-images.githubusercontent.com/56393986/168025172-4f3e7aee-dc48-44f4-9347-49003699342d.png)  
 
 **CSV etablissements**  
-![image](https://user-images.githubusercontent.com/56393986/168025870-a3c3ecc2-3332-4f2b-8a9f-6f21a3e76e25.png) ![image](https://user-images.githubusercontent.com/56393986/168026051-126a303a-7421-4bee-a317-90e427f2f28a.png) cocher la case définir les nom de colonne en entête (ou je sais plus c'est quoi le nom)  
-![image](https://user-images.githubusercontent.com/56393986/168026166-87d5e801-acac-4d75-8499-3b23d7f85e76.png) ![image](https://user-images.githubusercontent.com/56393986/168026463-3d6b35c5-c518-40bf-a8e8-b78314c43c72.png)
+![image](https://user-images.githubusercontent.com/56393986/168025870-a3c3ecc2-3332-4f2b-8a9f-6f21a3e76e25.png)  
+![image](https://user-images.githubusercontent.com/56393986/168026051-126a303a-7421-4bee-a317-90e427f2f28a.png)  
+cocher la case définir les nom de colonne en entête (ou je sais plus c'est quoi le nom)  
+![image](https://user-images.githubusercontent.com/56393986/168026166-87d5e801-acac-4d75-8499-3b23d7f85e76.png)  
+![image](https://user-images.githubusercontent.com/56393986/168026463-3d6b35c5-c518-40bf-a8e8-b78314c43c72.png)  
 
 **CSV ProSanté**  
-![image](https://user-images.githubusercontent.com/56393986/168027264-98ecd001-f232-4cbf-82fd-9275414a854c.png) ![image](https://user-images.githubusercontent.com/56393986/168027483-fbd4bdaf-1608-4433-8664-695319aa89d4.png) ![image](https://user-images.githubusercontent.com/56393986/168027703-85e5e612-bfef-41b2-bfd1-c45b1585e8c8.png)
+![image](https://user-images.githubusercontent.com/56393986/168027264-98ecd001-f232-4cbf-82fd-9275414a854c.png)  
+![image](https://user-images.githubusercontent.com/56393986/168027483-fbd4bdaf-1608-4433-8664-695319aa89d4.png)  
+![image](https://user-images.githubusercontent.com/56393986/168027703-85e5e612-bfef-41b2-bfd1-c45b1585e8c8.png)  
+
+**lien entre les deux**
+![image](https://user-images.githubusercontent.com/56393986/168036261-3d6365cc-f46e-42dd-8c18-1206d4903070.png)
+
