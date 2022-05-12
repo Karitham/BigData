@@ -59,3 +59,7 @@ PgProjet
 connecter à la base pg soin medico administratifs
 permets de connecter à la base de données postgres 'soins_medico_administratifs'
 
+mot de passe = cesi
+![image](https://user-images.githubusercontent.com/56393986/168025172-4f3e7aee-dc48-44f4-9347-49003699342d.png)
+
+
