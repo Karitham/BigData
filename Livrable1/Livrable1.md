@@ -1,4 +1,5 @@
 # Livrable 1 : Référentiel de données
+
 Modèle conceptuel des données et jobs nécessaires pour alimenter le schéma décisionnel
 
 Description :
@@ -12,7 +13,8 @@ Format : Rapport
 # Livrable 1
 
 ## Modélisation des différents axes d'analyse ainsi que les mesures
-**Besoins utilisateurs** : 
+
+**Besoins utilisateurs** :
 Une première consultation a permis de mettre en évidence le type d'analyses souhaitées par les utilisateurs :
 - Taux de consultation des patients dans un établissement X sur une période de temps Y
 - Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
@@ -28,13 +30,17 @@ https://www.figma.com/file/EL2AWFi2fTb4YMNwyjobal/BigData?node-id=0%3A1
 
 
 ## Développement des jobs d'alimentation du schéma décisionnel
+
 comme sur le WSProsit 2
 
 ## Description de l'architecture de l’entrepôt de données
+
 datawharehouse => prosit 2
 
 # Notes
+
 ## Jobs Talend
+
 BM_Livrable => nom du nouveau buisness model  
 objectifs : Livrable
 
@@ -46,11 +52,10 @@ DB Postgres : soins_medico_administratifs
 CSV : activité professionnel de santé, etablissement santé, professionnel de santé, satisfaction (2016,17-18,19,20), liste des personnes décédées (2010-2021), Hospitalisations
 
 ## connection talend aux sources de données :
+
 **connexion à la base de donnée**
 
 PgProjet
 connecter à la base pg soin medico administratifs
 permets de connecter à la base de données postgres 'soins_medico_administratifs'
-
-
 
