@@ -53,13 +53,20 @@ CSV : activité professionnel de santé, etablissement santé, professionnel de 
 
 ## connection talend aux sources de données :
 
-**connexion à la base de donnée**
+**connexion à la base de donnée PG**
 
 PgProjet
 connecter à la base pg soin medico administratifs
 permets de connecter à la base de données postgres 'soins_medico_administratifs'
 
-mot de passe = cesi
+mot de passe = cesi  
 ![image](https://user-images.githubusercontent.com/56393986/168025172-4f3e7aee-dc48-44f4-9347-49003699342d.png)
 
+**CSV etablissements**
+![image](https://user-images.githubusercontent.com/56393986/168025870-a3c3ecc2-3332-4f2b-8a9f-6f21a3e76e25.png)
+![image](https://user-images.githubusercontent.com/56393986/168026051-126a303a-7421-4bee-a317-90e427f2f28a.png)
+![image](https://user-images.githubusercontent.com/56393986/168026166-87d5e801-acac-4d75-8499-3b23d7f85e76.png)
+
+
+ 
 
