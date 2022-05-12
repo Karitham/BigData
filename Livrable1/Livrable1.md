@@ -24,7 +24,7 @@ Une première consultation a permis de mettre en évidence le type d'analyses so
 - Taux global de satisfaction par région sur l'année 2020
 
 https://www.figma.com/file/EL2AWFi2fTb4YMNwyjobal/BigData?node-id=0%3A1
-![image](https://user-images.githubusercontent.com/57440386/167427390-cadd9a40-fb91-490d-b5b6-ea086f20eef0.png)
+![image](https://user-images.githubusercontent.com/57440386/168024178-2aec1741-6448-4b45-a257-e990703a8c81.png)
 
 
 ## Développement des jobs d'alimentation du schéma décisionnel
