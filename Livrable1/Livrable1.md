@@ -45,6 +45,12 @@ objectif : bdd livrable1
 DB Postgres : soins_medico_administratifs
 CSV : activité professionnel de santé, etablissement santé, professionnel de santé, satisfaction (2016,17-18,19,20), liste des personnes décédées (2010-2021), Hospitalisations
 
+## connection talend aux sources de données :
+**connexion à la base de donnée**
+
+PgProjet
+connecter à la base pg soin medico administratifs
+permets de connecter à la base de données postgres 'soins_medico_administratifs'
 
 
 
