@@ -38,7 +38,7 @@ comme sur le WSProsit 2
 Description de l'architecture de l’entrepôt de données
 ------------------------------------------------------
 
-datawharehouse => prosit 2
+![image](https://user-images.githubusercontent.com/57440386/168040690-d4edca6f-7014-4fc8-9509-e2a347a80c89.png)
 
 Notes
 =====
