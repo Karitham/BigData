@@ -76,5 +76,13 @@ cocher la case définir les nom de colonne en entête (ou je sais plus c'est quo
 ![image](https://user-images.githubusercontent.com/56393986/168027703-85e5e612-bfef-41b2-bfd1-c45b1585e8c8.png)  
 
 **lien entre les deux**
-![image](https://user-images.githubusercontent.com/56393986/168036261-3d6365cc-f46e-42dd-8c18-1206d4903070.png)
+![image](https://user-images.githubusercontent.com/56393986/168036261-3d6365cc-f46e-42dd-8c18-1206d4903070.png)  
+![image](https://user-images.githubusercontent.com/56393986/168036550-725c0fd5-49c4-4a8d-8e20-de4a14205b4d.png)  
+![image](https://user-images.githubusercontent.com/56393986/168036654-8922bb8c-5c91-449a-ad5f-8954fb2114b6.png)  
+![image](https://user-images.githubusercontent.com/56393986/168036802-7bf90b59-e926-4dbd-8b3b-187b6595863e.png)  
+
+
+
+
+
 
