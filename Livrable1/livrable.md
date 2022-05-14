@@ -12,6 +12,13 @@ Modele dimensionnel des donnees
 
 ![modele dimmensionel des donnees](./data_warehouse.jpg)
 
+La table centrale est la table de fait. Elle pourrait etre decoupee en 2 parties:
+
+-	Vert: Liens avec les dimensions autour
+-	Jaune: Donnees calculees. Dans notre cas specifique, elles representent les donnees par jour, et par region.
+
+Il nous faut transformer nos donnees sources, tres disparates, de facon a les integrer a notre modele, pour pouvoir operer dessus.
+
 Architecture
 ------------
 
