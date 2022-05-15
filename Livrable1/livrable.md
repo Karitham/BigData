@@ -12,6 +12,14 @@ Modele dimensionnel des donnees
 
 ![modele dimmensionel des donnees](./data_warehouse.jpg)
 
+Ce schema represente un modele dimensionnel en etoile.
+
+Le modele en etoile a un avantage principal: Il minimise les jointures, ce qui est extremement important en Big Data. De plus, vu que l'on travail avec Hive, et que Hive nous restraint sur le nombre de jointures.
+
+Il a aussi des inconveniants, tels que la de-normalisation partielle de certaines donnees, mais dans notre cas, la vitesse d'execution est plus importante que l'espace pris.
+
+Il existe d'autre modeles, tels que en flocon, ou meme en constellation, que l'on a juge moins adapte a nos besoins et qui ne seront donc pas decris icis.
+
 La table centrale est la table de fait. Elle pourrait etre decoupee en 2 parties:
 
 -	Vert: Liens avec les dimensions autour
@@ -27,7 +35,7 @@ L'architecture exposee ci-dessous est composee de 3 parties :
 -	Les sources
 	-	Fichiers CSV (UTF-8)
 	-	Fichiers Excel (xlsx, UTF-8)
-	-	Base de donnee Postgres (`pg://postgres:cesi@localhost:5432/soins_medico_administratifs`\)
+	-	Base de donnee Postgres (`pg://postgres:cesi@localhost:5432/soins_medico_administratifs`)
 -	Les transformations
 -	Les sorties
 
