@@ -37,6 +37,25 @@ Ce schema de la documentation microsoft powerBI la represente de facon tres expl
 
 Pour en apprendre plus sur les schemas en etoile, vous trouverez [ici](https://docs.microsoft.com/fr-fr/power-bi/guidance/star-schema) des explications plus poussees sur les nombreux avantages qu'elle nous fournit.
 
+Dans notre cas, nous avons fait le choix d'avoir 5 dimensions:
+
+-	Professionels de sante:
+    -	Taux de consultation des patients dans un établissement X
+    -	Taux de consultation par professionnel
+-	Diagnostiques
+    -	Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
+    -	Taux d'hospitalisation des patients par rapport à des diagnostics sur une période donnée
+-	Dates
+    -	Taux de consultation des patients dans un établissement X sur une période de temps Y
+    -	Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
+    -	Taux global d'hospitalisation des patients dans une période donnée Y
+    -	Nombre de décès par localisation (région) et sur l'année 2019
+    -	Taux global de satisfaction par région sur l'année 2020
+-	Patients
+    -	Taux d'hospitalisation/consultation par sexe, par âge
+-	Localisation
+    -	Nombre de décès par localisation (région) et sur l'année 2019
+
 Une fois notre modele choisis, il nous faut transformer nos donnees sources, tres disparates, de facon a les integrer pour pouvoir operer dessus.
 
 Architecture
