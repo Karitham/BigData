@@ -70,7 +70,7 @@ L'architecture exposee ci-dessous est composee de 3 parties :
 -	Les transformations
 -	Les sorties
 
-Nos entrees ne sont pas des mappages 1-1 avec nos sorties, et certaines sorties sont composees d'aggregats d'autres sorties, telle que la table de fait.
+Nos entrees n'ont pas de relations 1-1 avec nos sorties, et certaines sorties sont composees d'aggregats d'autres sorties, telle que la table de fait.
 
 Nous avons donc des etapes intermediaires. Il nous faut par exemple stoquer les transformations des dimensions pour remplir la table de fait. De plus, les dimensions elle-memes peuvent dependre d'autre dimensions, ou tout simplement d'autre aggregats.
 
@@ -82,3 +82,5 @@ Toutes les differentes transformations nous permettent de construire les differe
 
 En fonction de nos besoins, la construction de notre table de fait va differer. Ici, nous avons fait le choix de stoquer les faits en fonction de 3 dimensions clefs: `jour`, `sexe` et `region`, qui vont nous permettre d'avoir des mesures assez precise sans avoir trop d'impact sur le temps d'execution de nos requetes plus tard.
 Ces dimensions choisies ont aussi un autre role: il nous est possible de partitionner les tables dans Hive avec ces dimensions, ce qui nous permet encore de reduire les temps de requetes. L'avantage est donc double, puisque nous gagnons du temps d'execution, et que nous n'avons que tres peu de transformations a effectuer pour le partitionnement.
+
+
