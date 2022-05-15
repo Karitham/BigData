@@ -37,9 +37,7 @@ Ce schema de la documentation microsoft powerBI la represente de facon tres expl
 
 Pour en apprendre plus sur les schemas en etoile, vous trouverez [ici](https://docs.microsoft.com/fr-fr/power-bi/guidance/star-schema) des explications plus poussees sur les nombreux avantages qu'elle nous fournit.
 
-Il nous faut transformer nos donnees sources, tres disparates, de facon a les integrer a notre modele, pour pouvoir operer dessus.
-
-
+Une fois notre modele choisis, il nous faut transformer nos donnees sources, tres disparates, de facon a les integrer pour pouvoir operer dessus.
 
 Architecture
 ------------
@@ -58,3 +56,10 @@ Nos entrees ne sont pas des mappages 1-1 avec nos sorties, et certaines sorties 
 Nous avons donc des etapes intermediaires. Il nous faut par exemple stoquer les transformations des dimensions pour remplir la table de fait. De plus, les dimensions elle-memes peuvent dependre d'autre dimensions, ou tout simplement d'autre aggregats.
 
 <!-- insert diagram here -->
+
+Nous utilisons plusieurs etapes intermediaires de facon a reduire les transformations necessaires, et nous utilisons donc des fichiers delimites (CSV) en tant que cache de fortune, que l'on stoque dans l'HDFS.
+
+Toutes les differentes transformations nous permettent de construire les differentes dimensions, avec lesquelles nous pouvons creer notre table de fait finale.
+
+En fonction de nos besoins, la construction de notre table de fait va differer. Ici, nous avons fait le choix de stoquer les faits en fonction de 3 dimensions clefs: `jour`, `sexe` et `region`, qui vont nous permettre d'avoir des mesures assez precise sans avoir trop d'impact sur le temps d'execution de nos requetes plus tard.
+Ces dimensions choisies ont aussi un autre role: il nous est possible de partitionner les tables dans Hive avec ces dimensions, ce qui nous permet encore de reduire les temps de requetes. L'avantage est donc double, puisque nous gagnons du temps d'execution, et que nous n'avons que tres peu de transformations a effectuer pour le partitionnement.
