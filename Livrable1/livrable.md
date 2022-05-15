@@ -76,7 +76,7 @@ Nos entrees n'ont pas de relations 1-1 avec nos sorties, et certaines sorties so
 
 Nous avons donc des etapes intermediaires. Il nous faut par exemple stoquer les transformations des dimensions pour remplir la table de fait. De plus, les dimensions elle-memes peuvent dependre d'autre dimensions, ou tout simplement d'autre aggregats.
 
-<!-- insert diagram here -->
+![image](https://user-images.githubusercontent.com/57440386/168479668-5c24650c-8db9-4158-916f-65200e2436fd.png)
 
 Nous utilisons plusieurs etapes intermediaires de facon a reduire les transformations necessaires, et nous utilisons donc des fichiers delimites (CSV) en tant que cache de fortune, que l'on stoque dans l'HDFS.
 
