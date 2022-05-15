@@ -56,6 +56,8 @@ Dans notre cas, nous avons fait le choix d'avoir 5 dimensions:
 -	Localisation
     -	Nombre de décès par localisation (région) et sur l'année 2019
 
+Ces dimensions sont intemement liees aux besoins des decideurs, car nous ne souhaitons ne stoquer que les donnees necessaires, mais il faut evidemment en stoquer assez.
+
 Une fois notre modele choisis, il nous faut transformer nos donnees sources, tres disparates, de facon a les integrer pour pouvoir operer dessus.
 
 Architecture
