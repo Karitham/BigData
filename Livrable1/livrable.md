@@ -25,7 +25,21 @@ La table centrale est la table de fait. Elle pourrait etre decoupee en 2 parties
 -	Vert: Liens avec les dimensions autour
 -	Jaune: Donnees calculees. Dans notre cas specifique, elles representent les donnees par jour, et par region.
 
+Elle represente les donnees qui nous interessent reelement, et sur lesquelles nous basons nos analyses.
+
+Nous avons besoins d'autre tables autour de la table de Fait, pour etendre nos relations et obtenir un contexte plus pousse pour nos analyses, tout en gardant une certaine forme de normalisation.
+
+Chaque table autour de la table de fait est donc appellee une table de dimension, car elle donne des *dimensions* a nos donnees, elle les contextualise et les rends exploitable.
+
+Le nom de model en etoile est assez simple a comprendre avec ces informations: la table de fait represente le corps de l'etoile, et chaque dimension une de ces branches.
+
+Ce schema de la documentation microsoft powerBI la represente de facon tres explicite: ![schema etoile doc microsoft](https://docs.microsoft.com/fr-fr/power-bi/guidance/media/star-schema/star-schema-example1.png)
+
+Pour en apprendre plus sur les schemas en etoile, vous trouverez [ici](https://docs.microsoft.com/fr-fr/power-bi/guidance/star-schema) des explications plus poussees sur les nombreux avantages qu'elle nous fournit.
+
 Il nous faut transformer nos donnees sources, tres disparates, de facon a les integrer a notre modele, pour pouvoir operer dessus.
+
+
 
 Architecture
 ------------
