@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_iy00oNHuEeyVsbuduh8kkw" confirmationNeeded="false" name="Default">
-  <contextParameter xmi:id="_iy00odHuEeyVsbuduh8kkw" comment="" name="hospitalisations_File" prompt="hospitalisations_File?" promptNeeded="false" type="id_File" value="C:/Users/Administrateur.WIN-T87HKARVT4F/Documents/Sources_Hospitalisations/Hospitalisations.csv"/>
-  <contextParameter xmi:id="_iy00otHuEeyVsbuduh8kkw" comment="" name="hospitalisations_Header" prompt="hospitalisations_Header?" promptNeeded="false" type="id_Integer" value="1"/>
-  <contextParameter xmi:id="_iy00o9HuEeyVsbuduh8kkw" comment="" name="hospitalisations_RowSeparator" prompt="hospitalisations_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
-  <contextParameter xmi:id="_iy00pNHuEeyVsbuduh8kkw" comment="" name="hospitalisations_Encoding" prompt="hospitalisations_Encoding?" promptNeeded="false" type="id_String" value="UTF-8"/>
-  <contextParameter xmi:id="_iy00pdHuEeyVsbuduh8kkw" comment="" name="hospitalisations_FieldSeparator" prompt="hospitalisations_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
-</talendfile:ContextType>
