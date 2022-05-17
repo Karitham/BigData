@@ -26,6 +26,11 @@ Dans ce rapport nous détaillerons les scripts nécessaires à création des tab
 
 ## Création des tables et chargements des données
 
+
+Tout d'abord on commence par créer notre base de données. 
+
+
+
 ### Script pour la création et le chargement de données dans les tables
 
 Voici le script qui permet de créer les différentes tables dans Hive.
