@@ -6,10 +6,11 @@ CREATE TABLE IF NOT EXISTS facts (
  satisfaction FLOAT,
  localisation_id INT,
  diagnostique_id INT,
- professionel_id INT,
+ professionnel_id INT,
  date_id INT,
  patient_id INT
 )
+CLUSTERED BY (localisation_id, date_id) INTO 256 BUCKETS
 COMMENT 'Table de faits'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
@@ -23,6 +24,7 @@ CREATE TABLE IF NOT EXISTS dates (
  month INT,
  day INT
 )
+CLUSTERED BY (year) INTO 20 BUCKETS
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
 LINES TERMINATED BY '\n'
@@ -58,6 +60,7 @@ CREATE TABLE IF NOT EXISTS patients (
  sexe VARCHAR(256),
  age INT
 )
+CLUSTERED BY (sexe,age) INTO 256 BUCKETS
 COMMENT 'Table de patients, sexe et age'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
@@ -65,11 +68,12 @@ LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
 
 -- Professionels
-CREATE TABLE IF NOT EXISTS professionels (
+CREATE TABLE IF NOT EXISTS professionnels (
  id INT,
  nom VARCHAR(256),
  etablissement VARCHAR(256)
 )
+CLUSTERED BY (id) INTO 32 BUCKETS;
 COMMENT 'Table de pro, stoque le nom et la raison sociale (etablissement)'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
