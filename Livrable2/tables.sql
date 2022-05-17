@@ -1,4 +1,4 @@
--- Table de fait
+    -- Table de fait
 CREATE TABLE IF NOT EXISTS facts (
  nb_hospitalisations INT,
  nb_deces INT,
@@ -43,7 +43,7 @@ STORED AS TEXTFILE;
 CREATE TABLE IF NOT EXISTS diagnostiques (
  id INT,
  code_diag VARCHAR(256),
- diagnostique TEXT
+ diagnostique VARCHAR(25565)
 )
 COMMENT 'Table de diagnostiques, stoque un code de diagnostique ainsi que sa definition'
 ROW FORMAT DELIMITED
