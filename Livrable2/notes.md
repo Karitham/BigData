@@ -28,6 +28,8 @@ Dans ce rapport nous détaillerons les scripts nécessaires à création des tab
 
 ### Script pour la création et le chargement de données dans les tables
 
+Voici le script qui permet de créer les différentes tables dans Hive.
+
 
 ```SQL
 -- Table de fait
@@ -47,7 +49,10 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
+``` 
 
+Pour la table `Dates` on a besoin de stocker un id généré, le jour, le mois et l'année de la date. 
+```SQL
 -- Dates
 CREATE TABLE IF NOT EXISTS dates (
 	id INTEGER,
@@ -59,7 +64,10 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
+```  
 
+Pour la table `Localisations` on a besoin de stocker un id généré, et la région. 
+```SQL
 -- Localisations
 CREATE TABLE IF NOT EXISTS localisations (
 	id INTEGER,
@@ -70,7 +78,10 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
+```  
 
+Pour la table `Diagnostiques` on a besoin de stocker un id qui a été généré, le code du diagnostique et le nom du diagnostique. 
+```SQL
 -- Diagnostiques
 CREATE TABLE IF NOT EXISTS diagnostiques (
 	id INTEGER,
@@ -82,8 +93,10 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
+```  
 
-
+Pour la table `Patients` on a besoin de stocker id généré, le sexe du patient et son age. 
+```SQL
 -- Patients
 CREATE TABLE IF NOT EXISTS patients (
 	id INTEGER,
@@ -95,7 +108,10 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\;'
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
+```  
 
+Pour la table Professionnels de santé, nommé `Professionels` on a besoin de stocker l'id qui a été généré, le nom du professionnel de santé, et l'établissement dans lequel il exerce (si il exerce en libéral, l'établissement n'est pas spécifié).
+```SQL
 -- Professionels
 CREATE TABLE IF NOT EXISTS professionels (
 	id INTEGER,
@@ -107,8 +123,7 @@ ROW FORMAT DELIMITED
 FIELD TERMINATED BY '\;'
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
-
-```
+```  
 
 
 
