@@ -115,12 +115,54 @@ Si jamais on doit récupérer un fichier de backup, qui n'est donc pas dans HDFS
 LOAD DATA LOCAL INPATH '/chemin' INTO TABLE table_name
 ```
 
+#### Vérification des données dans les tables 
+
+Après avoir chargé nos données dans nos tables, nous vérifions la présence et la cohérence de données pour les différentes tables. 
+
+```SQL 
+SELECT * FROM dates 
+```  
+![image](https://user-images.githubusercontent.com/56393986/169074411-61b892b2-ed12-49b0-adf6-d3b67d6b244b.png)
+
+
+```SQL 
+SELECT * FROM diagnostiques 
+```  
+![image](https://user-images.githubusercontent.com/56393986/169074976-ba4189d2-9e51-4fd5-a613-fe82cb13a990.png)
+
+
+```SQL 
+SELECT * FROM localisations
+```  
+![image](https://user-images.githubusercontent.com/56393986/169075559-7b3f63f4-8dff-4ab8-a499-8f84da6c1873.png)
+
+
+```SQL 
+SELECT * FROM patients 
+```  
+![image](https://user-images.githubusercontent.com/56393986/169075792-56c8bdd5-2164-4c39-8931-84fc0339dd9d.png)
+
+
+
+```SQL 
+SELECT * FROM dates 
+```  
+
+
+
+```SQL 
+SELECT * FROM dates 
+``` 
+
+
 
 ### Vérification des données présentes et accès aux données à travers les tables
 ### Script montrant le peuplement des tables
 ### Script pour le partitionnement et les buckets
 
 ## Graphes des temps de réponses et performance
+
+Pour analyser le temps d'execution entre notre base de données partitionnée et la même base de donnée mais non partitionnée, on crée une deuxième base de données sans les partitions et on relève le temps d'executions des requêtes sur les deux bases différentes. 
 
 ### Graphes montrant les temps de réponses pour évaluer la performance d'accès à l'entrepôt de données 
 ### Requêtes faisant foi pour l'évaluation de la performance
