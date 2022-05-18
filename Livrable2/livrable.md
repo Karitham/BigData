@@ -22,9 +22,6 @@ Table des matières :
 4. [ Graphes des temps de réponses et performance ](#part2)
 5. [ Conclusion Livrable ](#part3)
 
-
-
-
 <a name="contexte"></a>
 ## Contexte
 
@@ -247,10 +244,15 @@ Theoriquement, plus nos donnees sont grosses, plus nous beneficions des avantage
 
 La [Loi_d'Amdahl](https://fr.wikipedia.org/wiki/Loi_d%27Amdahl) nous le demontre facilement, et nous ne doutons pas de l'avantage du bucketing ou du partitionnement, que nous avons evidemment utilise. (cf https://github.com/Karitham/BigData/blob/master/Livrable2/tables.sql)
 
-Neanmoins, il nous est impossible de le montrer par nos experiences, et donc d'elaborer plus sur ce fait.
+![AmdahlsLaw](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/AmdahlsLaw.svg/1280px-AmdahlsLaw.svg.png)
 
-### Nos expériences 
-Notre table test n'est pas partionnée, la table test2 est partitionnée. 
+Neanmoins, nos experiences se montrent peu concluentes sur les gains de performances, et nous voyons meme des regressions sur certaines tables.
+
+Il est evident que cela ne devrait pas etre le cas, mais les conditions ne nous ont pas permis de le prouver.
+
+### Nos expériences
+
+Notre table `test` n'est pas partionnée, la table `test2` est partitionnée. 
 
 #### Taux de consultation des patients dans un établissement X sur une période de temps Y
 ```SQL
