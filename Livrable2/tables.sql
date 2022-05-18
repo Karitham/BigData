@@ -1,5 +1,5 @@
     -- Table de fait
-CREATE TABLE IF NOT EXISTS facts (
+CREATE TABLE IF NOT EXISTS faits (
  nb_hospitalisations INT,
  nb_deces INT,
  nb_consultations INT,
