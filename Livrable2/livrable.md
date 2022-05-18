@@ -344,6 +344,7 @@ FROM faits
 GROUP BY sexe,
 	age;
 ```
+Dans les deux bases de données cette requête se fait timeout, mais à des durées différentes.
 ##### test
 ![image](https://user-images.githubusercontent.com/56393986/169117555-bc125cf4-d503-48cf-8401-dc3036d8a804.png)
 ##### test2
