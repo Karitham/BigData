@@ -110,6 +110,11 @@ Par exemple :
 LOAD DATA INPATH '/user/cloudera/projet/dates.csv' INTO TABLE dates
 ```
 
+Si jamais on doit récupérer un fichier de backup, qui n'est donc pas dans HDFS, pour remplir nos tables, on peut utiliser la même requête en ajoutant `LOCAL`, ce qui donnerais une requête dans cette forme : 
+```SQL
+LOAD DATA LOCAL INPATH '/chemin' INTO TABLE table_name
+```
+
 
 ### Vérification des données présentes et accès aux données à travers les tables
 ### Script montrant le peuplement des tables
