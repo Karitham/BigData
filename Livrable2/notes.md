@@ -29,7 +29,7 @@ Dans ce rapport nous détaillerons les scripts nécessaires à création des tab
 
 Tout d'abord on commence par créer notre base de données, avec la requête : 
 ```SQL
-CREATE DATABASE CHU
+CREATE DATABASE CHU ;
 ```
 où `CHU` est le nom de la base de données.  
 
