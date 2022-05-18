@@ -10,9 +10,10 @@ Description :
 - Graphes montrant les temps de réponses pour évaluer la performance d'accès à l'entrepôt de données
 - Requêtes faisant foi pour l'évaluation de la performance
 
-Format : Rapport + zip contenant les différents jobs Échéance : 18/05/2022
+Format : Rapport + zip contenant les différents jobs Échéance : 18/05/2022  
 
-Table des matières :
+***
+**Table des matières :**
 
 1. [ Contexte ](#contexte)
 2. [ Création des tables et chargements des données ](#part1)  
@@ -23,6 +24,7 @@ Table des matières :
         a. [ Nos expériences ](#part2_1)   
         b. [ Conclusion ](#part2_2)  
 6. [ Conclusion Livrable ](#part3)
+***
 
 <a name="contexte"></a>
 ## Contexte
