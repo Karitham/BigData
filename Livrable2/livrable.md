@@ -360,3 +360,4 @@ GROUP BY sexe,
 | Total                                                                                      | 440.55 | 418.12 |
 
 
+![image](https://user-images.githubusercontent.com/56393986/169132004-a4c6fed5-7790-4802-990d-c2b61395f752.png)
