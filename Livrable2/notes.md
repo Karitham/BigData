@@ -27,8 +27,11 @@ Dans ce rapport nous détaillerons les scripts nécessaires à création des tab
 ## Création des tables et chargements des données
 
 
-Tout d'abord on commence par créer notre base de données. 
-
+Tout d'abord on commence par créer notre base de données, avec la requête : 
+```SQL
+CREATE DATABASE CHU
+```
+où `CHU` est le nom de la base de données.  
 
 
 ### Script pour la création et le chargement de données dans les tables
