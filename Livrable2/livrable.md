@@ -348,6 +348,8 @@ GROUP BY sexe,
 
 
 ### Conclusion 
+Les données récoltées sont trop peu nombreuses pour montrer un écart significatif, on peut néamoins voir que l'on gagne quelques secondes sur notre base de données où l'on a partitionné et installé des buckets. 
+
 
 | Nom de la requête                                                                          | test   | test2  |
 |--------------------------------------------------------------------------------------------|--------|--------|
