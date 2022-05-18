@@ -251,7 +251,7 @@ Neanmoins, il nous est impossible de le montrer par nos experiences, et donc d'e
 ### Nos expériences 
 Notre table test n'est pas partionnée, la table test2 est partitionnée. 
 
-#### Requête1
+#### Taux de consultation des patients dans un établissement X sur une période de temps Y
 ```SQL
 -- Taux de consultation des patients dans un établissement X sur une période de temps Y
 SELECT sum(faits.nb_consultations) / (count(*) over()),
@@ -271,7 +271,7 @@ GROUP BY faits.professionnel_id;
 
 
 
-#### Requête2
+#### Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
 ```SQL
 -- Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
 SELECT sum(faits.nb_consultations) / (count(*) over()),
@@ -287,7 +287,7 @@ GROUP BY diagnostique_id;
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169110672-8e9a419a-16ae-4d44-a40b-e37c667ff22a.png)
 
-#### Requête3
+#### Taux global de satisfaction par région sur l'année 2020
 ```SQL
 -- Taux global de satisfaction par région sur l'année 2020
 SELECT faits.satisfaction,
@@ -301,7 +301,7 @@ WHERE faits.satisfaction IS NOT NULL;
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169112264-b48449c9-9056-4f1d-a35f-6699c773c99f.png)
 
-#### Requête4
+#### Nombre de décès par localisation (région) et sur l'année 2019
 ```SQL
 -- Nombre de décès par localisation (région) et sur l'année 2019
 SELECT sum(faits.nb_deces),
@@ -316,7 +316,7 @@ GROUP BY faits.localisation_id;
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169116288-ae29464c-0025-428e-ad99-b2403bbc296c.png)
 
-#### Requête
+#### Taux de consultation par professionnel
 ```SQL
 -- Taux de consultation par professionnel
 SELECT sum(faits.nb_consultations) / (count(*) over()),
@@ -330,7 +330,7 @@ GROUP BY faits.professionnel_id;
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169117156-0c8d5c9d-4936-48e7-8114-0a101dc89475.png)
 
-#### Requête
+#### Taux d'hospitalisation/consultation par sexe, par âge
 ```SQL
 -- Taux d'hospitalisation/consultation par sexe, par âge
 SELECT sum(faits.nb_consultations) + sum(faits.nb_hospitalisations),
