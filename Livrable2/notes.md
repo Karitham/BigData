@@ -1,4 +1,4 @@
-# livrable 2 : Modèle physique et optimisation
+# Livrable 2 : Modèle physique et optimisation
 
 Modèle physique et évaluation de performance par rapport aux temps de réponse des requêtes réalisées sur les tables.
 
@@ -41,6 +41,9 @@ où `CHU` est le nom de la base de données.
 Voici le script qui permet de créer les différentes tables dans Hive.
 Comme vu dans le livrable précédent, nos tables de base de données suivront notre schéma décisionnel en étoile. Nous aurons donc une table de fait qui regroupe nos mesures par dimensions, et des tables qui représentent les dimensions Dates, Localisations, Diagnostiques, Patients, et Professionnels de santé. 
 
+##### Table de faits
+Dans notre table de faits on stocke nos mesures, l'identifiant de la dimension à laquelle cette mesure est reliée. 
+Le `CLUSTERED BY (localisation_id, date_id) INTO 256 BUCKETS` permet de partionner notre table en 256 buckets. 
 
 ```SQL
 -- Table de fait
@@ -57,19 +60,32 @@ CREATE TABLE IF NOT EXISTS faits (
 ) CLUSTERED BY (localisation_id, date_id) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ``` 
 
+##### Dimension Dates
 Pour la table `Dates` on a besoin de stocker un id généré, le jour, le mois et l'année de la date. 
+De même ici on partionne notre table en 20 buckets. 
+
 ```SQL
 -- Dates
-CREATE TABLE IF NOT EXISTS dates (id INT, year INT, month INT, day INT) CLUSTERED BY (year) SORTED BY (year, month, day) INTO 20 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
+CREATE TABLE IF NOT EXISTS dates (
+    id INT,
+    year INT,
+    month INT,
+    day INT
+) CLUSTERED BY (year) SORTED BY (year, month, day) INTO 20 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
-
+##### Dimension Localisations 
 Pour la table `Localisations` on a besoin de stocker un id généré, et la région. 
+
 ```SQL
 -- Localisations
-CREATE TABLE IF NOT EXISTS localisations (id INT, region VARCHAR(256)) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
+CREATE TABLE IF NOT EXISTS localisations (
+    id INT,
+    region VARCHAR(256)
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
+##### Dimension Diagnostiques
+Pour la table `Diagnostiques` on a besoin de stocker un id qui a été généré, le code du diagnostique et le nom du diagnostique.
 
-Pour la table `Diagnostiques` on a besoin de stocker un id qui a été généré, le code du diagnostique et le nom du diagnostique. 
 ```SQL
 -- Diagnostiques
 CREATE TABLE IF NOT EXISTS diagnostiques (
@@ -78,14 +94,21 @@ CREATE TABLE IF NOT EXISTS diagnostiques (
     diagnostique VARCHAR(25565)
 ) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
-
+##### Dimension Patients
 Pour la table `Patients` on a besoin de stocker id généré, le sexe du patient et son age. 
+On partitionne nos patients par sexe, on a donc deux partitions.
+
 ```SQL
 -- Patients
-CREATE TABLE IF NOT EXISTS patients (id INT, sexe VARCHAR(256), age INT) CLUSTERED BY (sexe, age) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
+CREATE TABLE IF NOT EXISTS patients (
+    id INT,
+    sexe VARCHAR(256),
+    age INT
+) CLUSTERED BY (sexe, age) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
-
+#### Dimension Professionnels
 Pour la table Professionnels de santé, nommé `Professionels` on a besoin de stocker l'id qui a été généré, le nom du professionnel de santé, et l'établissement dans lequel il exerce (si il exerce en libéral, l'établissement n'est pas spécifié).
+
 ```SQL
 -- Professionels
 CREATE TABLE IF NOT EXISTS professionnels (
