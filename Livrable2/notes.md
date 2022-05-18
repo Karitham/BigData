@@ -142,30 +142,31 @@ LOAD DATA LOCAL INPATH '/chemin' INTO TABLE table_name
 
 Après avoir chargé nos données dans nos tables, nous vérifions la présence et la cohérence de données pour les différentes tables. 
 
+##### Dimension Dates
 ```SQL 
 SELECT * FROM dates 
 ```  
 ![image](https://user-images.githubusercontent.com/56393986/169074411-61b892b2-ed12-49b0-adf6-d3b67d6b244b.png)
 
-
+##### Dimension Diagnostiques
 ```SQL 
 SELECT * FROM diagnostiques 
 ```  
 ![image](https://user-images.githubusercontent.com/56393986/169074976-ba4189d2-9e51-4fd5-a613-fe82cb13a990.png)
 
-
+##### Dimension Localisations
 ```SQL 
 SELECT * FROM localisations
 ```  
 ![image](https://user-images.githubusercontent.com/56393986/169075559-7b3f63f4-8dff-4ab8-a499-8f84da6c1873.png)
 
-
+##### Dimension Patients
 ```SQL 
 SELECT * FROM patients 
 ```  
 ![image](https://user-images.githubusercontent.com/56393986/169075792-56c8bdd5-2164-4c39-8931-84fc0339dd9d.png)
 
-
+##### Dimension Professionnels
 ```SQL 
 SELECT * FROM professionnels 
 ```  
@@ -174,7 +175,7 @@ SELECT * FROM professionnels
 Pour les médecins libéraux on ne note pas l'éblissement auquel le professionnel est relié, car il n'est pas relié à un établissement. 
 ![image](https://user-images.githubusercontent.com/56393986/169081989-eadd4004-198c-4e97-a0ed-97d5ed20decc.png)
 
-
+##### Table de faits
 ```SQL 
 SELECT * FROM faits 
 ``` 
@@ -190,10 +191,6 @@ Ici on voit le nombre d'hospitalisations par diagnostique, professionnel, date e
 ![image](https://user-images.githubusercontent.com/56393986/169091945-3bd6a9e6-0345-4e4b-9a44-e9a6240e5412.png)
 ici on a le nombre de consultations, par diagnostique, professionnel, date et patient. 
 
-
-### Vérification des données présentes et accès aux données à travers les tables
-### Script montrant le peuplement des tables
-### Script pour le partitionnement et les buckets
 
 ## Graphes des temps de réponses et performance
 
