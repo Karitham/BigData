@@ -291,4 +291,15 @@ GROUP BY diagnostique_id;
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169110672-8e9a419a-16ae-4d44-a40b-e37c667ff22a.png)
 
+#### Requête3
+
+```SQL
+```
+
+##### test
+![image](https://user-images.githubusercontent.com/56393986/169111660-3032f8af-bd47-4b72-a558-bfafb20c3de3.png)
+
+
+##### test2
+
 
