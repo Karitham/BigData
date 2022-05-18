@@ -20,7 +20,9 @@ Table des matières :
         a. [ Chargement des données dans la table ](#part1_2)  
         a. [ Vérification des données dans les tables ](#part1_3)  
 4. [ Graphes des temps de réponses et performance ](#part2)
-5. [ Conclusion Livrable ](#part3)
+        a. [ Nos expériences ](#part2_1)  
+        a. [ Conclusions ](#part2_2)  
+6. [ Conclusion Livrable ](#part3)
 
 <a name="contexte"></a>
 ## Contexte
@@ -250,6 +252,8 @@ Neanmoins, nos experiences se montrent peu concluentes sur les gains de performa
 
 Il est evident que cela ne devrait pas etre le cas, mais les conditions ne nous ont pas permis de le prouver.
 
+
+<a name="part2_1"></a>
 ### Nos expériences
 
 Notre table `test` n'est pas partionnée, la table `test2` est partitionnée. 
@@ -351,6 +355,7 @@ Dans les deux bases de données cette requête se fait timeout, mais à des dur�
 ![image](https://user-images.githubusercontent.com/56393986/169117859-7bb3a58c-846c-4792-b2f2-360d37b4eb7d.png)
 
 
+<a name="part2_2"></a>
 ### Conclusion 
 Les données récoltées sont trop peu nombreuses pour montrer un écart significatif, on peut néamoins voir que l'on gagne quelques secondes sur notre base de données où l'on a partitionné et installé des buckets. 
 
