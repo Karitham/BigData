@@ -13,17 +13,17 @@ Description :
 Format : Rapport + zip contenant les différents jobs Échéance : 18/05/2022  
 
 ***
-**Table des matières :**
+## Table des matières :
 
-1. [ Contexte ](#contexte)
-2. [ Création des tables et chargements des données ](#part1)  
+**1. [ Contexte ](#contexte)
+**2. [ Création des tables et chargements des données ](#part1)**  
         a. [ Script pour la création des tables ](#part1_1)  
         b. [ Chargement des données dans la table ](#part1_2)  
         c. [ Vérification des données dans les tables ](#part1_3)  
-4. [ Graphes des temps de réponses et performance ](#part2)  
+**4. [ Graphes des temps de réponses et performance ](#part2)**  
         a. [ Nos expériences ](#part2_1)   
         b. [ Conclusion ](#part2_2)  
-6. [ Conclusion Livrable ](#part3)
+**6. [ Conclusion Livrable ](#part3)**
 ***
 
 <a name="contexte"></a>
