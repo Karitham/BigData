@@ -265,8 +265,6 @@ GROUP BY faits.professionnel_id;
 ##### test
 ![image](https://user-images.githubusercontent.com/56393986/169105806-7bf2e778-1710-4416-ae75-45ea11bd2219.png)
 ![image](https://user-images.githubusercontent.com/56393986/169108747-c0bb680f-8f14-49d2-b20f-0148375b4012.png)
-
-
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169106832-d3bd5c0d-490c-422c-a8a2-b16f5f9515f6.png)
 ![image](https://user-images.githubusercontent.com/56393986/169107414-136f24a8-cc51-4fe1-b6ee-3d82436f23e0.png)
@@ -284,15 +282,12 @@ WHERE faits.nb_consultations IS NOT NULL
 	AND dates.year = ?
 GROUP BY diagnostique_id;
 ```
-
 ##### test
 ![image](https://user-images.githubusercontent.com/56393986/169109336-54c3691b-cabb-4429-946d-52f6b3cc7ed4.png)
-
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169110672-8e9a419a-16ae-4d44-a40b-e37c667ff22a.png)
 
 #### Requête3
-
 ```SQL
 -- Taux global de satisfaction par région sur l'année 2020
 SELECT faits.satisfaction,
@@ -301,15 +296,12 @@ FROM faits
 	INNER JOIN localisations ON faits.localisation_id = localisations.id
 WHERE faits.satisfaction IS NOT NULL;
 ```
-
 ##### test
 ![image](https://user-images.githubusercontent.com/56393986/169111660-3032f8af-bd47-4b72-a558-bfafb20c3de3.png)
-
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169112264-b48449c9-9056-4f1d-a35f-6699c773c99f.png)
 
 #### Requête4
-
 ```SQL
 -- Nombre de décès par localisation (région) et sur l'année 2019
 SELECT sum(faits.nb_deces),
@@ -319,10 +311,23 @@ FROM faits
 WHERE faits.nb_deces IS NOT NULL
 GROUP BY faits.localisation_id;
 ```
-
 ##### test 
 ![image](https://user-images.githubusercontent.com/56393986/169113327-9aee8640-510e-4f56-9772-3f596ac130d8.png)
-
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169116288-ae29464c-0025-428e-ad99-b2403bbc296c.png)
+
+#### Requête
+```SQL
+-- Taux de consultation par professionnel
+SELECT sum(faits.nb_consultations) / (count(*) over()),
+	faits.professionnel_id
+FROM faits
+WHERE faits.nb_consultations IS NOT NULL
+GROUP BY faits.professionnel_id;
+```
+##### test
+![image](https://user-images.githubusercontent.com/56393986/169116790-08c09e4e-1a97-463b-9815-2cb24749b476.png)
+##### test2
+![image](https://user-images.githubusercontent.com/56393986/169117156-0c8d5c9d-4936-48e7-8114-0a101dc89475.png)
+
 
