@@ -301,5 +301,6 @@ GROUP BY diagnostique_id;
 
 
 ##### test2
+![image](https://user-images.githubusercontent.com/56393986/169112264-b48449c9-9056-4f1d-a35f-6699c773c99f.png)
 
 
