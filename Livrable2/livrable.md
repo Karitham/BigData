@@ -330,4 +330,20 @@ GROUP BY faits.professionnel_id;
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169117156-0c8d5c9d-4936-48e7-8114-0a101dc89475.png)
 
+#### Requête
+```SQL
+-- Taux d'hospitalisation/consultation par sexe, par âge
+SELECT sum(faits.nb_consultations) + sum(faits.nb_hospitalisations),
+	patients.sexe,
+	patients.age
+FROM faits
+	INNER JOIN patients ON faits.patient_id = patients.id
+GROUP BY sexe,
+	age;
+```
+##### test
+![image](https://user-images.githubusercontent.com/56393986/169117555-bc125cf4-d503-48cf-8401-dc3036d8a804.png)
+##### test2
+![image](https://user-images.githubusercontent.com/56393986/169117859-7bb3a58c-846c-4792-b2f2-360d37b4eb7d.png)
+
 
