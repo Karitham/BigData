@@ -19,7 +19,7 @@ Table des matières :
         a. [ Script pour la création des tables ](#part1_1)  
         a. [ Chargement des données dans la table ](#part1_2)  
         a. [ Vérification des données dans les tables ](#part1_3)  
-4. [ Graphes des temps de réponses et performance ](#part2)
+4. [ Graphes des temps de réponses et performance ](#part2)  
         a. [ Nos expériences ](#part2_1)   
         a. [ Conclusions ](#part2_2)  
 6. [ Conclusion Livrable ](#part3)
