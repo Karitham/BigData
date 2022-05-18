@@ -264,9 +264,13 @@ GROUP BY faits.professionnel_id;
 ```
 ##### test
 ![image](https://user-images.githubusercontent.com/56393986/169105806-7bf2e778-1710-4416-ae75-45ea11bd2219.png)
+![image](https://user-images.githubusercontent.com/56393986/169108747-c0bb680f-8f14-49d2-b20f-0148375b4012.png)
+
 
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169106832-d3bd5c0d-490c-422c-a8a2-b16f5f9515f6.png)
+![image](https://user-images.githubusercontent.com/56393986/169107414-136f24a8-cc51-4fe1-b6ee-3d82436f23e0.png)
+
 
 
 #### Requête2
