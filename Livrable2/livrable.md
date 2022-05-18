@@ -20,7 +20,7 @@ Table des matières :
         a. [ Chargement des données dans la table ](#part1_2)  
         a. [ Vérification des données dans les tables ](#part1_3)  
 4. [ Graphes des temps de réponses et performance ](#part2)
-5. [ Conclusion ](#part3)
+5. [ Conclusion Livrable ](#part3)
 
 
 
@@ -366,6 +366,12 @@ Les données récoltées sont trop peu nombreuses pour montrer un écart signifi
 ![image](https://user-images.githubusercontent.com/56393986/169132004-a4c6fed5-7790-4802-990d-c2b61395f752.png)
 
 <a name="part3"></a>
-## Conclusion 
+## Conclusion Livrable
+
+Pour ce Livrable, nous avons mis en place notre base de données avec les tables nécessaires pour réaliser notre model  décisionnel en étoile. Nous avons donc définis une table de faits, et nos tables qui représentent les dimensions, -insérer les différentes dimensions-. Ensuite nous avons rempli nos tables avec les données précédemment traitées et enregistrées dans HDFS, grâce à nos jobs Talend. Puis nous avons vérifié nos données en faisant des sélections sur nos tables. Nous avons aussi partitionné nos tables en partitions et buckets pour gagner en performance.
+Pour terminer nous avons traduits nos requêtes en besoins et nous les avons executé pour mesurer les performances. 
+
+***
+Nous avons commencé par analyser nos différents besoins pour définir notre modèle décisionnel en étoile. Ce modèle nous permet de répondre à chacun des besoins en calculant une valeur dans la table de fait, valeur qui peut être décrite par une ou plusieurs dimensions en fonction de nos besoins. Ensuite nous avons décrit l’architecture de notre entrepôt de données, où seront stockées nos données. Pour terminer, nous avons développé nos jobs en utilisant talend, ces jobs remplissent nos dimensions. On utilise dans ces jobs les données mises à notre disposition dans les différents fichiers CSV, XSLX, et la base de données postgres, et nous faisons des traitements sur ces données pour qu’elles soient triées et utilisables dans notre modèle décisionnel.
 
 
