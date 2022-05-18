@@ -155,7 +155,17 @@ Pour les médecins libéraux on ne note pas l'éblissement auquel le professionn
 ```SQL 
 SELECT * FROM faits 
 ``` 
+![image](https://user-images.githubusercontent.com/56393986/169088416-ac4a4f10-7cf5-4028-8de4-bddd3725e0f0.png)
+On peux ici voir dans notre table de faits la mesure 'nombre de décès' et les références aux dimensions qui lui sont associées, ici la localisation.  
 
+![image](https://user-images.githubusercontent.com/56393986/169089109-2c41635f-41c0-4b18-8bca-ca19d9a51dcc.png)
+De même ici avec la satisfaction reliée à la localisation.  
+
+![image](https://user-images.githubusercontent.com/56393986/169089532-bce0aa21-61c0-4373-b6ca-6beac80e0c85.png)
+Ici on voit le nombre d'hospitalisations par diagnostique, professionnel, date et par patient.
+
+![image](https://user-images.githubusercontent.com/56393986/169091945-3bd6a9e6-0345-4e4b-9a44-e9a6240e5412.png)
+ici on a le nombre de consultations, par diagnostique, professionnel, date et patient. 
 
 
 ### Vérification des données présentes et accès aux données à travers les tables
