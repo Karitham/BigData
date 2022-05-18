@@ -147,7 +147,8 @@ SELECT * FROM patients
 SELECT * FROM professionnels 
 ```  
 ![image](https://user-images.githubusercontent.com/56393986/169080901-779a173f-477a-4e73-aabb-8d3a5a996c5d.png)
-Pour les médecins libéraux on ne note pas l'éblissement auquel le professionnel est relié
+
+Pour les médecins libéraux on ne note pas l'éblissement auquel le professionnel est relié, car il n'est pas relié à un établissement. 
 ![image](https://user-images.githubusercontent.com/56393986/169081989-eadd4004-198c-4e97-a0ed-97d5ed20decc.png)
 
 
