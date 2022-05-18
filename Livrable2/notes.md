@@ -196,5 +196,10 @@ ici on a le nombre de consultations, par diagnostique, professionnel, date et pa
 
 Pour analyser le temps d'execution entre notre base de données partitionnée et la même base de donnée mais non partitionnée, on crée une deuxième base de données sans les partitions et on relève le temps d'executions des requêtes sur les deux bases différentes. 
 
+Pour évaluer notre temps de réponse (et donc la performance d'accès à l'entrepôt de données) on utilise plusieurs requêtes :
+```SQL
+requetes sql de pl
+``` 
+
 ### Graphes montrant les temps de réponses pour évaluer la performance d'accès à l'entrepôt de données 
 ### Requêtes faisant foi pour l'évaluation de la performance
