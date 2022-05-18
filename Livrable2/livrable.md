@@ -247,3 +247,26 @@ Theoriquement, plus nos donnees sont grosses, plus nous beneficions des avantage
 La [Loi_d'Amdahl](https://fr.wikipedia.org/wiki/Loi_d%27Amdahl) nous le demontre facilement, et nous ne doutons pas de l'avantage du bucketing ou du partitionnement, que nous avons evidemment utilise. (cf https://github.com/Karitham/BigData/blob/master/Livrable2/tables.sql)
 
 Neanmoins, il nous est impossible de le montrer par nos experiences, et donc d'elaborer plus sur ce fait.
+
+### Nos expériences 
+Notre table test n'est pas partionnée, la table test2 est partitionnée. 
+
+#### Requête1
+```SQL
+-- Taux de consultation des patients dans un établissement X sur une période de temps Y
+SELECT sum(faits.nb_consultations) / (count(*) over()),
+	faits.professionnel_id
+FROM faits
+	INNER JOIN dates ON faits.date_id = dates.id
+WHERE faits.nb_consultations IS NOT NULL
+	AND dates.year = ?
+GROUP BY faits.professionnel_id;
+```
+![image](https://user-images.githubusercontent.com/56393986/169105806-7bf2e778-1710-4416-ae75-45ea11bd2219.png)
+
+#### Requête2
+```SQL
+```
+
+
+
