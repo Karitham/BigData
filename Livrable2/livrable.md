@@ -11,8 +11,7 @@ Description :
 - Requêtes faisant foi pour l'évaluation de la performance
 
 Format : Rapport + zip contenant les différents jobs Échéance : 18/05/2022  
-
-***
+___
 ## Table des matières :
 
 1. [ Contexte ](#contexte)    
@@ -24,7 +23,7 @@ Format : Rapport + zip contenant les différents jobs Échéance : 18/05/2022
 	a. [ Nos expériences ](#part2_1)   
 	b. [ Conclusion ](#part2_2)  
 6. [ Conclusion Livrable ](#part3)
-***
+___
 
 <a name="contexte"></a>
 ## Contexte
