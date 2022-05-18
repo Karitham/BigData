@@ -16,7 +16,10 @@ Table des matières :
 
 1. [ Contexte ](#contexte)
 2. [ Création des tables et chargements des données ](#part1)
-3. [ Graphes des temps de réponses et performance ](#part2)
+        a. [ Script pour la création des tables ](#part1_1)
+        a. [ Chargement des données dans la table ](#part1_2)
+        a. [ Vérification des données dans les tables ](#part1_3)
+4. [ Graphes des temps de réponses et performance ](#part2)
 
 
 
@@ -42,7 +45,7 @@ CREATE DATABASE CHU ;
 ```
 où `CHU` est le nom de la base de données.  
 
-
+<a name="part1_1"></a>
 ### Script pour la création des tables
 
 #### Création des tables dans Hive
@@ -127,7 +130,7 @@ CREATE TABLE IF NOT EXISTS professionnels (
 ) CLUSTERED BY (id) INTO 32 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
 
-
+<a name="part1_2"></a>
 ### Chargement des données dans la table
 
 Pour charges les données dans Hive, nous avons récupéré les fichiers créés dans HDFS grâce à nos jobs Talend.
@@ -146,7 +149,7 @@ Si jamais on doit récupérer un fichier de backup, qui n'est donc pas dans HDFS
 ```SQL
 LOAD DATA LOCAL INPATH '/chemin' INTO TABLE table_name
 ```
-
+<a name="part1_3"></a>
 ### Vérification des données dans les tables 
 
 Après avoir chargé nos données dans nos tables, nous vérifions la présence et la cohérence de données pour les différentes tables. 
