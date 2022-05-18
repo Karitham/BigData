@@ -33,6 +33,8 @@ Tout d'abord on commence par créer notre base de données.
 
 ### Script pour la création et le chargement de données dans les tables
 
+#### Création des tables dans Hive
+
 Voici le script qui permet de créer les différentes tables dans Hive.
 Comme vu dans le livrable précédent, nos tables de base de données suivront notre schéma décisionnel en étoile. Nous aurons donc une table de fait qui regroupe nos mesures par dimensions, et des tables qui représentent les dimensions Dates, Localisations, Diagnostiques, Patients, et Professionnels de santé. 
 
@@ -73,7 +75,9 @@ Pour la table Professionnels de santé, nommé `Professionels` on a besoin de st
 ```  
 
 
+#### Chargement des données dans la table
 
+Pour charges les données dans Hive, nous avons récupéré les fichiers texte créés dans HDFS grâce à nos jobs Talend.
 
 
 ### Vérification des données présentes et accès aux données à travers les tables
