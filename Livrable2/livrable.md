@@ -262,7 +262,12 @@ WHERE faits.nb_consultations IS NOT NULL
 	AND dates.year = ?
 GROUP BY faits.professionnel_id;
 ```
+##### test
 ![image](https://user-images.githubusercontent.com/56393986/169105806-7bf2e778-1710-4416-ae75-45ea11bd2219.png)
+
+##### test2
+![image](https://user-images.githubusercontent.com/56393986/169106832-d3bd5c0d-490c-422c-a8a2-b16f5f9515f6.png)
+
 
 #### Requête2
 ```SQL
