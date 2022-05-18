@@ -77,7 +77,13 @@ Pour la table Professionnels de santé, nommé `Professionels` on a besoin de st
 
 #### Chargement des données dans la table
 
-Pour charges les données dans Hive, nous avons récupéré les fichiers texte créés dans HDFS grâce à nos jobs Talend.
+Pour charges les données dans Hive, nous avons récupéré les fichiers créés dans HDFS grâce à nos jobs Talend.
+On utilise la requête : 
+```SQL
+LOAD DATA INPATH '/chemin' INTO TABLE table_name
+```  
+avec `'/chemin'` le chemin du fichier comme par exemple `/user/cloudera/projet/dates.csv`
+et `table_name` le nom de la table dans la base de données. 
 
 
 ### Vérification des données présentes et accès aux données à travers les tables
