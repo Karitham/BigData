@@ -305,8 +305,23 @@ WHERE faits.satisfaction IS NOT NULL;
 ##### test
 ![image](https://user-images.githubusercontent.com/56393986/169111660-3032f8af-bd47-4b72-a558-bfafb20c3de3.png)
 
-
 ##### test2
 ![image](https://user-images.githubusercontent.com/56393986/169112264-b48449c9-9056-4f1d-a35f-6699c773c99f.png)
 
+#### Requête4
+
+```SQL
+-- Nombre de décès par localisation (région) et sur l'année 2019
+SELECT sum(faits.nb_deces),
+	faits.localisation_id
+FROM faits
+	INNER JOIN localisations ON faits.localisation_id = localisations.id
+WHERE faits.nb_deces IS NOT NULL
+GROUP BY faits.localisation_id;
+```
+
+##### test 
+![image](https://user-images.githubusercontent.com/56393986/169113327-9aee8640-510e-4f56-9772-3f596ac130d8.png)
+
+##### test2
 
