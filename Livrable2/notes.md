@@ -41,37 +41,55 @@ Comme vu dans le livrable précédent, nos tables de base de données suivront n
 
 ```SQL
 -- Table de fait
-
+CREATE TABLE IF NOT EXISTS faits (
+    nb_hospitalisations INT,
+    nb_deces INT,
+    nb_consultations INT,
+    satisfaction FLOAT,
+    localisation_id INT,
+    diagnostique_id INT,
+    professionnel_id INT,
+    date_id INT,
+    patient_id INT
+) CLUSTERED BY (localisation_id, date_id) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ``` 
 
 Pour la table `Dates` on a besoin de stocker un id généré, le jour, le mois et l'année de la date. 
 ```SQL
 -- Dates
-
+CREATE TABLE IF NOT EXISTS dates (id INT, year INT, month INT, day INT) CLUSTERED BY (year) SORTED BY (year, month, day) INTO 20 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
 
 Pour la table `Localisations` on a besoin de stocker un id généré, et la région. 
 ```SQL
 -- Localisations
-
+CREATE TABLE IF NOT EXISTS localisations (id INT, region VARCHAR(256)) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
 
 Pour la table `Diagnostiques` on a besoin de stocker un id qui a été généré, le code du diagnostique et le nom du diagnostique. 
 ```SQL
 -- Diagnostiques
-
+CREATE TABLE IF NOT EXISTS diagnostiques (
+    id INT,
+    code_diag VARCHAR(256),
+    diagnostique VARCHAR(25565)
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
 
 Pour la table `Patients` on a besoin de stocker id généré, le sexe du patient et son age. 
 ```SQL
 -- Patients
-
+CREATE TABLE IF NOT EXISTS patients (id INT, sexe VARCHAR(256), age INT) CLUSTERED BY (sexe, age) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
 
 Pour la table Professionnels de santé, nommé `Professionels` on a besoin de stocker l'id qui a été généré, le nom du professionnel de santé, et l'établissement dans lequel il exerce (si il exerce en libéral, l'établissement n'est pas spécifié).
 ```SQL
 -- Professionels
-
+CREATE TABLE IF NOT EXISTS professionnels (
+    id INT,
+    nom VARCHAR(256),
+    etablissement VARCHAR(256)
+) CLUSTERED BY (id) INTO 32 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
 
 
