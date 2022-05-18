@@ -20,6 +20,7 @@ Table des matières :
         a. [ Chargement des données dans la table ](#part1_2)  
         a. [ Vérification des données dans les tables ](#part1_3)  
 4. [ Graphes des temps de réponses et performance ](#part2)
+5. [ Conclusion ](#part3)
 
 
 
@@ -363,3 +364,8 @@ Les données récoltées sont trop peu nombreuses pour montrer un écart signifi
 
 
 ![image](https://user-images.githubusercontent.com/56393986/169132004-a4c6fed5-7790-4802-990d-c2b61395f752.png)
+
+<a name="part3"></a>
+## Conclusion 
+
+
