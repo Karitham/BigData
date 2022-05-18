@@ -41,7 +41,7 @@ Dans ce rapport nous détaillerons les scripts nécessaires à création des tab
 
 Tout d'abord on commence par créer notre base de données, avec la requête : 
 ```SQL
-CREATE DATABASE CHU ;
+CREATE DATABASE CHU;
 ```
 où `CHU` est le nom de la base de données.  
 
@@ -112,11 +112,10 @@ On partitionne nos patients par sexe, on a donc deux partitions.
 
 ```SQL
 -- Patients
-CREATE TABLE IF NOT EXISTS patients (
+CREATE TABLE patients (
     id INT,
-    sexe VARCHAR(256),
     age INT
-) CLUSTERED BY (sexe, age) INTO 256 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
+) PARTITIONED BY (sexe VARCHAR(256)) INTO 50 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY '\;' LINES TERMINATED BY '\n' STORED AS TEXTFILE;
 ```  
 #### Dimension Professionnels
 Pour la table Professionnels de santé, nommé `Professionels` on a besoin de stocker l'id qui a été généré, le nom du professionnel de santé, et l'établissement dans lequel il exerce (si il exerce en libéral, l'établissement n'est pas spécifié).
@@ -208,10 +207,43 @@ ici on a le nombre de consultations, par diagnostique, professionnel, date et pa
 
 Pour analyser le temps d'execution entre notre base de données partitionnée et la même base de donnée mais non partitionnée, on crée une deuxième base de données sans les partitions et on relève le temps d'executions des requêtes sur les deux bases différentes. 
 
-Pour évaluer notre temps de réponse (et donc la performance d'accès à l'entrepôt de données) on utilise plusieurs requêtes :
-```SQL
-requetes sql de pl
-``` 
+Pour évaluer notre temps de réponse (et donc la performance d'accès à l'entrepôt de données) on utilise cette requêtes, avec laquelle nous avons eu les plus gros problemes de performance :
 
-### Graphes montrant les temps de réponses pour évaluer la performance d'accès à l'entrepôt de données 
-### Requêtes faisant foi pour l'évaluation de la performance
+```SQL
+SELECT sum(faits.nb_consultations) + sum(faits.nb_hospitalisations),
+	patients.sexe,
+	patients.age
+FROM faits
+	INNER JOIN patients ON faits.patient_id = patients.id
+GROUP BY sexe,
+	age;
+```
+
+Cette requete prenait plus de 10 minutes (timeout) sans bucketing, ainsi que partitionnement, mais le temps significatif effectue sur la requete etait inferieur a une minute.
+
+Apres bucketing et partitionnement, nous avons aussi timeout, et n'avons pas vu de difference significatives lors du planning de la requete ainsi que l'execution.
+
+Il est evident que le partitionnement aurait du avoir un impact, ainsi que le bucketing.
+
+Nos resultats en demontre le contraire, mais il est flagrant que notre VM a des problemes de performances, et que notre environnement est defecteux.
+
+Pour le prouver, il me suffit d'effectuer une requete `SELECT count(*) FROM clients`. Cette requete mets plus de 1 minute a s'effectuer, pour compter 0 lignes, sur une table vide.
+
+```sql
+CREATE DATABASE shiny_new_test; -- 0.8s
+USE shiny_new_test; -- 0.1s
+CREATE TABLE clients (
+    id INT,
+    name VARCHAR(256),
+    surname VARCHAR(256)
+); -- 1.4s
+SELECT count(*) FROM clients; -- 114s de runtime
+```
+
+Il est donc tout simplement impossible de mesurer les performances de facon fiable, et de demontrer de reels changements.
+
+Theoriquement, plus nos donnees sont grosses, plus nous beneficions des avantages du parallelismes, permis par le partitionement et le bucketing.
+
+La [Loi_d'Amdahl](https://fr.wikipedia.org/wiki/Loi_d%27Amdahl) nous le demontre facilement, et nous ne doutons pas de l'avantage du bucketing ou du partitionnement, que nous avons evidemment utilise. (cf https://github.com/Karitham/BigData/blob/master/Livrable2/tables.sql)
+
+Neanmoins, il nous est impossible de le montrer par nos experiences, et donc d'elaborer plus sur ce fait.
