@@ -38,96 +38,37 @@ Voici le script qui permet de créer les différentes tables dans Hive.
 
 ```SQL
 -- Table de fait
-CREATE TABLE IF NOT EXISTS facts (
-	nb_hospitalisations INTEGER,
-	nb_deces INTEGER,
-	nb_consultations INTEGER,
-	satisfaction FLOAT,
-	localisation_id INTEGER,
-	diagnostique_id INTEGER,
-	professionel_id INTEGER,
-	date_id INTEGER,
-	patient_id INTEGER
-)
-COMMENT 'Table de faits'
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY '\;'
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE;
+
 ``` 
 
 Pour la table `Dates` on a besoin de stocker un id généré, le jour, le mois et l'année de la date. 
 ```SQL
 -- Dates
-CREATE TABLE IF NOT EXISTS dates (
-	id INTEGER,
-	year INT8,
-	month INT8,
-	day INT16
-)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY '\;'
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE;
+
 ```  
 
 Pour la table `Localisations` on a besoin de stocker un id généré, et la région. 
 ```SQL
 -- Localisations
-CREATE TABLE IF NOT EXISTS localisations (
-	id INTEGER,
-	region VARCHAR
-)
-COMMENT 'Table de localisation, ne stoque que les regions'
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY '\;'
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE;
+
 ```  
 
 Pour la table `Diagnostiques` on a besoin de stocker un id qui a été généré, le code du diagnostique et le nom du diagnostique. 
 ```SQL
 -- Diagnostiques
-CREATE TABLE IF NOT EXISTS diagnostiques (
-	id INTEGER,
-	code_diag VARCHAR,
-	diagnostique TEXT
-)
-COMMENT 'Table de diagnostiques, stoque un code de diagnostique ainsi que sa definition'
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY '\;'
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE;
+
 ```  
 
 Pour la table `Patients` on a besoin de stocker id généré, le sexe du patient et son age. 
 ```SQL
 -- Patients
-CREATE TABLE IF NOT EXISTS patients (
-	id INTEGER,
-	sexe VARCHAR,
-	age INT8
-)
-COMMENT 'Table de patients, sexe et age'
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY '\;'
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE;
+
 ```  
 
 Pour la table Professionnels de santé, nommé `Professionels` on a besoin de stocker l'id qui a été généré, le nom du professionnel de santé, et l'établissement dans lequel il exerce (si il exerce en libéral, l'établissement n'est pas spécifié).
 ```SQL
 -- Professionels
-CREATE TABLE IF NOT EXISTS professionels (
-	id INTEGER,
-	nom VARCHAR,
-	etablissement VARCHAR
-)
-COMMENT 'Table de pro, stoque le nom et la raison sociale (etablissement)'
-ROW FORMAT DELIMITED
-FIELD TERMINATED BY '\;'
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE;
+
 ```  
 
 
