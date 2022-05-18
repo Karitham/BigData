@@ -100,8 +100,12 @@ On utilise la requête :
 ```SQL
 LOAD DATA INPATH '/chemin' INTO TABLE table_name
 ```  
-avec `'/chemin'` le chemin du fichier comme par exemple `/user/cloudera/projet/dates.csv`
-et `table_name` le nom de la table dans la base de données. 
+avec `'/chemin'` le chemin du fichier et `table_name` le nom de la table dans la base de données.  
+
+Par exemple : 
+```SQL
+LOAD DATA INPATH '/user/cloudera/projet/dates.csv' INTO TABLE dates
+```
 
 
 ### Vérification des données présentes et accès aux données à travers les tables
