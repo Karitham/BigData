@@ -275,7 +275,20 @@ GROUP BY faits.professionnel_id;
 
 #### Requête2
 ```SQL
+-- Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
+SELECT sum(faits.nb_consultations) / (count(*) over()),
+	diagnostique_id
+FROM faits
+	INNER JOIN dates ON faits.date_id = dates.id
+WHERE faits.nb_consultations IS NOT NULL
+	AND dates.year = ?
+GROUP BY diagnostique_id;
 ```
 
+##### test
+![image](https://user-images.githubusercontent.com/56393986/169109336-54c3691b-cabb-4429-946d-52f6b3cc7ed4.png)
+
+##### test2
+![image](https://user-images.githubusercontent.com/56393986/169110672-8e9a419a-16ae-4d44-a40b-e37c667ff22a.png)
 
 
