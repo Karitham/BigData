@@ -347,3 +347,16 @@ GROUP BY sexe,
 ![image](https://user-images.githubusercontent.com/56393986/169117859-7bb3a58c-846c-4792-b2f2-360d37b4eb7d.png)
 
 
+### Conclusion 
+
+| Nom de la requête                                                                          | test   | test2  |
+|--------------------------------------------------------------------------------------------|--------|--------|
+| Taux de consultation des patients dans un établissement X sur une période de temps Y       | 87     | 88     |
+| Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y | 95     | 88     |
+| Taux global de satisfaction par région sur l'année 2020                                    | 39.34  | 51.46  |
+| Nombre de décès par localisation (région) et sur l'année 2019                              | 58.21  | 50.66  |
+| Taux de consultation par professionnel                                                     | 71     | 60     | 
+| Taux d'hospitalisation/consultation par sexe, par âge                                      | 90     | 80     |
+| Total                                                                                      | 440.55 | 418.12 |
+
+
