@@ -14,17 +14,14 @@ Format : Rapport + zip contenant les différents jobs Échéance : 18/05/2022
 
 Table des matières :
 
-1. [ Description. ](#desc)
-2. [ Usage tips. ](#usage)
+1. [ Contexte ](#contexte)
+2. [ Création des tables et chargements des données ](#part1)
+3. [ Graphes des temps de réponses et performance ](#part2)
 
-<a name="desc"></a>
-## 1. Description
 
-sometext
 
-<a name="usage"></a>
-## 2. Usage tips
 
+<a name="contexte"></a>
 ## Contexte
 
 Le potentiel énorme associé aux données médicales a conduit le secteur de la santé à une transformation importante et rapide. Pour progresser dans la bonne voie, les praticiens (médecins, personnel infirmier) et les administrateurs d'établissements doivent pouvoir accéder directement aux informations exploitables dans les données médicales, afin d'améliorer leurs performances et la qualité des soins de manière mesurable.  
@@ -35,6 +32,7 @@ Dans le dernier rapport nous avions illustré les différentes manières dont no
 
 Dans ce rapport nous détaillerons les scripts nécessaires à création des tables dans Hive, le chargement et l'affichage des données pour la vérification. La structure de nos table sera optimisée et partitionnée avec des buckets pour réduire le temps de réponse de nos requêtes. 
 
+<a name="part1"></a>
 ## Création des tables et chargements des données
 
 
@@ -202,7 +200,7 @@ Ici on voit le nombre d'hospitalisations par diagnostique, professionnel, date e
 ![image](https://user-images.githubusercontent.com/56393986/169091945-3bd6a9e6-0345-4e4b-9a44-e9a6240e5412.png)
 ici on a le nombre de consultations, par diagnostique, professionnel, date et patient. 
 
-
+<a name="part2"></a>
 ## Graphes des temps de réponses et performance
 
 Pour analyser le temps d'execution entre notre base de données partitionnée et la même base de donnée mais non partitionnée, on crée une deuxième base de données sans les partitions et on relève le temps d'executions des requêtes sur les deux bases différentes. 
