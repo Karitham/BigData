@@ -294,6 +294,12 @@ GROUP BY diagnostique_id;
 #### Requête3
 
 ```SQL
+-- Taux global de satisfaction par région sur l'année 2020
+SELECT faits.satisfaction,
+	localisations.id
+FROM faits
+	INNER JOIN localisations ON faits.localisation_id = localisations.id
+WHERE faits.satisfaction IS NOT NULL;
 ```
 
 ##### test
