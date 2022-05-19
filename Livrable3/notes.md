@@ -32,6 +32,8 @@ On peux Transformer les données si besoin.
 Notre table de faits as des clés qui relient les mesures à nos dimensions, on doit donc pouvoir être capable de relier les deux. Pour ce faire on ajoute des relations grâce à Power BI.
 
 Dans l'onglet `Modélisation` on fait `Gérer les relations`. D'abord on supprime les relations générées automatiquement dans le cas où il y aurait une erreur, puis on crée une nouvelle relation à l'aide de `Nouveau...`.
+![image](https://user-images.githubusercontent.com/56393986/169246569-fc0df0dd-1234-4332-b409-1159da4ffdaa.png)
+
 
 Source : [ Documentation Microsoft ](https://docs.microsoft.com/fr-fr/power-bi/transform-model/desktop-create-and-manage-relationships)
 
