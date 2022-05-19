@@ -51,13 +51,12 @@ Rappel sur les besoins :
 - Nombre de décès par localisation (région) et sur l'année 2019
 - Taux global de satisfaction par région sur l'année 2020
 
-### Taux de consultation des patients dans un établissement X sur une période de temps Y
+### 1. Taux de consultation des patients dans un établissement X sur une période de temps Y
 
-
-### Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
-### Taux global d'hospitalisation des patients dans une période donnée Y
-### Taux d'hospitalisation des patients par rapport à des diagnostics sur une période donnée
-### Taux d'hospitalisation/consultation par sexe, par âge
-### Taux de consultation par professionnel
-### Nombre de décès par localisation (région) et sur l'année 2019
-### Taux global de satisfaction par région sur l'année 2020
+### 2. Taux de consultation des patients par rapport à un diagnostic X sur une période de temps Y
+### 3. Taux global d'hospitalisation des patients dans une période donnée Y
+### 4. Taux d'hospitalisation des patients par rapport à des diagnostics sur une période donnée
+### 5. Taux d'hospitalisation/consultation par sexe, par âge
+### 6. Taux de consultation par professionnel
+### 7. Nombre de décès par localisation (région) et sur l'année 2019
+### 8. Taux global de satisfaction par région sur l'année 2020
