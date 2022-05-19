@@ -15,7 +15,6 @@ Format : Présentation orale de 20min +10min de questions/réponses Date de réa
 
 
 ## Connexion à Hive via PowerBI
-
 Pour connecter notre base de données à PowerBI, il faut appuyer sur `Plus...` dans `Obtenir les données` dans la barre de l'Accueil. 
 
 ![image](https://user-images.githubusercontent.com/56393986/169240436-a1f12f83-ed0b-41a9-b8a7-7951f2f19130.png)
@@ -29,4 +28,8 @@ On sélectionne les tables qu'on a besoin et on les importe dans PowerBI.
 
 On peux Transformer les données si besoin. 
 
+## Gestion des relations entre les tables
+Notre table de faits as des clés qui relient les mesures à nos dimensions, on doit donc pouvoir être capable de relier les deux. Pour ce faire on ajoute des relations grâce à Power BI.
+
+Source : [ Documentation Microsoft ](https://docs.microsoft.com/fr-fr/power-bi/transform-model/desktop-create-and-manage-relationships)
 
