@@ -2,7 +2,7 @@
 
 Ressources : 
 - [ Script Tables ](https://github.com/Karitham/BigData/blob/master/Livrable2/tables.sql)
-- [ Sccript Requêtes ](https://github.com/Karitham/BigData/blob/master/Livrable2/requetes.sql)
+- [ Script Requêtes ](https://github.com/Karitham/BigData/blob/master/Livrable2/requetes.sql)
 
 ***
 ## Table des matières :
