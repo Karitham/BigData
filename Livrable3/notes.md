@@ -16,6 +16,7 @@ Format : Présentation orale de 20min +10min de questions/réponses Date de réa
 
 ## Connexion à Hive via PowerBI
 Pour connecter notre base de données à PowerBI, il faut d'abord configuer l'ODBC Driver.
+Il faut appuyer sur Windows + R simultanément et taper "odbcad32"
 
 ![image](https://user-images.githubusercontent.com/56252271/169271086-84a29f24-2942-4716-8e81-ed495587cdf1.png)
 
