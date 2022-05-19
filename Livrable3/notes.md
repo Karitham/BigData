@@ -33,7 +33,8 @@ Notre table de faits as des clés qui relient les mesures à nos dimensions, on 
 
 Dans l'onglet `Modélisation` on fait `Gérer les relations`. D'abord on supprime les relations générées automatiquement dans le cas où il y aurait une erreur, puis on crée une nouvelle relation à l'aide de `Nouveau...`.
 ![image](https://user-images.githubusercontent.com/56393986/169246569-fc0df0dd-1234-4332-b409-1159da4ffdaa.png)
-
+On doit obtenir ça à la fin. 
+![image](https://user-images.githubusercontent.com/56393986/169247064-3b4aa6e2-9752-454e-92e4-b4eaa351a2db.png)
 
 Source : [ Documentation Microsoft ](https://docs.microsoft.com/fr-fr/power-bi/transform-model/desktop-create-and-manage-relationships)
 
