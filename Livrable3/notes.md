@@ -15,13 +15,19 @@ Format : Présentation orale de 20min +10min de questions/réponses Date de réa
 
 
 ## Connexion à Hive via PowerBI
-Pour connecter notre base de données à PowerBI, il faut appuyer sur `Plus...` dans `Obtenir les données` dans la barre de l'Accueil. 
+Pour connecter notre base de données à PowerBI, il faut d'abord configuer l'ODBC Driver.
 
-![image](https://user-images.githubusercontent.com/56393986/169240436-a1f12f83-ed0b-41a9-b8a7-7951f2f19130.png)
+![image](https://user-images.githubusercontent.com/56252271/169271086-84a29f24-2942-4716-8e81-ed495587cdf1.png)
 
-Ensuite on choisit Hive et on se connecte (Si ça marche pas sur Hive il faut prendre Impala).
-![image](https://user-images.githubusercontent.com/56393986/169240915-f72a321d-1b88-49ac-8ed1-9f4f17a0916d.png)
-![image](https://user-images.githubusercontent.com/56393986/169242027-3e553d14-a4c8-47e3-a99c-98658e82bcfe.png)
+
+Il faut ensuite ajouter un utilisateur "Cloudera ODBC Driver for Apache Hive" et cliquer sur finish.
+![image](https://user-images.githubusercontent.com/56252271/169271564-68fd34f7-b635-41d3-826c-3025b5de2fb0.png)
+
+On a une nouvelle fenêtre qui s'ouvre où on va configurer notre accès à Hive.
+![image](https://user-images.githubusercontent.com/56252271/169271767-383cd45f-c103-4f82-9afa-780aade07f3b.png)
+
+On va ensuite dans PowerBi, on importe des données, on clique sur "plus", on tape ODBC dans la barre de recherche et on se connecte à l'aide de ODBC
+On met cloudera en utilisateur et mot de passe et on se connecte.
 
 On sélectionne les tables qu'on a besoin et on les importe dans PowerBI. 
 ![image](https://user-images.githubusercontent.com/56393986/169242424-0fb77562-3d50-462b-b952-771cbc595145.png)
